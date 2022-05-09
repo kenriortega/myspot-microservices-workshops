@@ -1,0 +1,20 @@
+@url = http://localhost:5040
+@parkingSpotId = 00000000-0000-0000-0000-000000000000
+
+###
+GET {{url}}
+
+###
+GET {{url}}/parking-spots
+
+###
+PUT {{url}}/parking-spots/{{parkingSpotId}}
+Content-Type: application/json
+
+{
+    "name": "P02",
+    "displayOrder": "101"
+}
+
+###
+DELETE {{url}}/parking-spots/{{parkingSpotId}}
